@@ -26,7 +26,7 @@ public class ThreeSum {
 
             while (left < right) {
 
-                int sum = arr[i] + arr[left] + arr[right];
+                long sum = (long) arr[i] + arr[left] + arr[right];
 
                 if (sum == 0) {
 

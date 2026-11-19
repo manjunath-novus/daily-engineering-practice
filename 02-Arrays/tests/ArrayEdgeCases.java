@@ -89,6 +89,26 @@ public class ArrayEdgeCases {
 
         check("Original input remains unchanged",
             Arrays.equals(original, copy));
+
+        check("Negative integer overflow",
+            ThreeSum.threeSum(
+                new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE, 0}
+            ).isEmpty());
+
+        check("Positive integer overflow",
+            ThreeSum.threeSum(
+                new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE, 2}
+            ).isEmpty());
+
+        check("Valid triplet with integer extremes",
+            containsTriplet(
+                ThreeSum.threeSum(
+                    new int[]{Integer.MIN_VALUE, 1, Integer.MAX_VALUE}
+                ),
+                Arrays.asList(
+                    Integer.MIN_VALUE, 1, Integer.MAX_VALUE
+                )
+            ));
     }
 
     public static void main(String[] args) {
