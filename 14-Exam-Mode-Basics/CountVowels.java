@@ -1,11 +1,9 @@
-
 public class CountVowels {
 
     public static int countVowels(String str) {
         if (str == null) {
             return 0;
         }
-
         int count = 0;
         str = str.toLowerCase();
 
@@ -17,10 +15,8 @@ public class CountVowels {
                 count++;
             }
         }
-
         return count;
     }
-
     public static void main(String[] args) {
         System.out.println(countVowels("Hello World"));
         System.out.println(countVowels("JAVA PROGRAMMING"));
