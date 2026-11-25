@@ -25,9 +25,6 @@ public class ThreeSum {
             int right = arr.length - 1;
 
             while (left < right) {
-
-                long sum = (long) arr[i] + arr[left] + arr[right];
-
                 if (sum == 0) {
 
                     result.add(Arrays.asList(
